@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insights Planner | Samuel Omobuwa</title>
+    <meta name="description" content="Insights planner for Samuel Omobuwa featuring analytics delivery tasks, reporting priorities, and customer insight planning." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="planner">
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Main navigation">
+          <a href="index.html" class="brand" aria-label="Samuel Omobuwa home">
+            <img class="brand-logo" src="logo.svg" alt="Samuel Omobuwa logo" />
+            <span class="brand-text">
+              <strong>Samuel Omobuwa</strong>
+              <span>Data Analyst</span>
+            </span>
+          </a>
+          <div class="nav-outside">
+            <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+            <button class="theme-toggle" type="button" aria-label="Switch to night mode">☾</button>
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a class="active" href="planner.html">Insights Planner</a></li>
+              <li><a class="nav-cta" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-hero">
+        <div class="container hero-inner">
+          <span class="eyebrow">Insights planner</span>
+          <h1>Plan reporting, analysis, and customer improvement work.</h1>
+          <p>Use this planner to keep track of reporting cycles, analysis tasks, and priority follow-ups that improve customer experience and operational performance.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container planner-layout">
+          <aside class="task-panel">
+            <div class="section-heading">
+              <span class="eyebrow">Add task</span>
+              <h2>New reporting item</h2>
+            </div>
+            <form id="plannerForm" class="task-form">
+              <div class="field">
+                <label for="taskTitle">Task title</label>
+                <input id="taskTitle" name="title" type="text" placeholder="e.g. Complaint trend review" required />
+              </div>
+
+              <div class="field">
+                <label for="taskDue">Due date</label>
+                <input id="taskDue" name="due" type="date" required />
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="taskType">Type</label>
+                  <select id="taskType" name="type">
+                    <option>Assignment</option>
+                    <option>Project</option>
+                    <option>Review</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="taskPriority">Priority</label>
+                  <select id="taskPriority" name="priority">
+                    <option>High</option>
+                    <option selected>Medium</option>
+                    <option>Low</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="taskNotes">Notes</label>
+                <textarea id="taskNotes" name="notes" rows="4" placeholder="Add brief context, data source or expected outcome..."></textarea>
+              </div>
+
+              <button class="button button-primary" type="submit">Add task</button>
+            </form>
+          </aside>
+
+          <div class="task-list-panel">
+            <div class="section-heading">
+              <span class="eyebrow">Planner board</span>
+              <h2>Current tasks</h2>
+            </div>
+            <div id="taskList" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <img class="brand-logo" src="logo.svg" alt="Samuel Omobuwa logo" />
+              <strong>Samuel Omobuwa</strong>
+            </div>
+            <p>Data Analyst focused on customer insights, business intelligence, and performance reporting in the Nigerian banking space.</p>
+          </div>
+          <div>
+            <h4>Navigation</h4>
+            <ul class="footer-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="projects.html">Projects</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul class="footer-menu">
+              <li><a href="planner.html">Planner</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul class="footer-menu">
+              <li><a href="mailto:samuelomobuwa1@gmail.com">samuelomobuwa1@gmail.com</a></li>
+              <li><a href="tel:+2349039523714">+234 903 952 3714</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="year"></span> Samuel Omobuwa</span>
+          <span>Customer insights • Business intelligence • Data-driven growth</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
